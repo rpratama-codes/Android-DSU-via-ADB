@@ -141,7 +141,7 @@ if [[ $(ls -l $FolderOutput$FileName.gz | wc -l) != 1 ]]; then
   # compress
   echo "Compressing Image - Just Wait it need a time"
   echo "$(date '+%Y%m%d%H%M%S') Compressing Image - Just Wait it need a time" >>./process.log
-  7z a -tgzip $FolderOutput$FileName.gz $FolderInput$FileName.img
+  7z a -tgzip -mmt=on $FolderOutput$FileName.gz $FolderInput$FileName.img
   copyingImage
 else
   # pushing compressed image to download folder
